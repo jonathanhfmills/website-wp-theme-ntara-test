@@ -1,0 +1,12 @@
+{
+    "name": "jonathanhfmills/website-wp-theme-template",
+    "version": "0.1.0",
+    "type": "wordpress-theme",
+    "homepage": "https://github.com/jonathanhfmills/website-wp-theme-template",
+    "authors": [{
+        "name": "Jonathan Mills",
+        "homepage": "https://github.com/jonathanhfmills"
+    }],
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
