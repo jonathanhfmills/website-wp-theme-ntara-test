@@ -7,6 +7,9 @@
         "name": "Jonathan Mills",
         "homepage": "https://github.com/jonathanhfmills"
     }],
+	"require": {
+		"twbs/bootstrap": "5.3.8"
+	},
     "prefer-stable": true,
     "minimum-stability": "dev"
 }
