@@ -16,6 +16,17 @@ class WP_THEME {
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'custom-logo' );
         add_theme_support( 'html5' , [ 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ] );
+        add_theme_support( 'woocommerce', [
+            'thumbnail_image_width' => 512,
+            'single_image_width' => 1024,
+            'gallery_thumbnail_image_width' => 150,
+            'product_grid' => [
+                'default_columns' => 3,
+                'default_rows' => 4,
+                'min_columns' => 2,
+                'max_columns' => 3,
+            ],
+        ] );
     }
 
     function init() {
@@ -41,6 +52,17 @@ class WP_THEME {
         add_action( 'wp_head', fn() => get_template_part( 'template-parts/head' ) );
         add_action( 'wp_body_open', fn() => get_template_part( 'template-parts/header' ) );
         add_action( 'wp_footer', fn() => get_template_part( 'template-parts/footer' ) );
+
+        // WooCommerce Customizations
+        add_action( 'woocommerce_init', [ $this, 'woocommerce_init' ] );
+    }
+
+    function woocommerce_init() {
+        // Remove default WooCommerce styles on non-shop and non-category pages
+        add_filter( 'woocommerce_enqueue_styles', fn( $styles ) => ( ! is_shop() && ! is_product_category() ) ? $styles : [] );
+
+        // Customize WooCommerce pagination text
+        add_filter( 'woocommerce_pagination_args', fn( $args ) => array_merge( $args, [ 'prev_text' => 'Previous', 'next_text' => 'Next' ] ) );
     }
 }
 
