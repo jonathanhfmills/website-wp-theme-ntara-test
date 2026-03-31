@@ -7,9 +7,19 @@
         "name": "Jonathan Mills",
         "homepage": "https://github.com/jonathanhfmills"
     }],
-	"require": {
-		"twbs/bootstrap": "5.3.8"
-	},
+    "require": {
+      "twbs/bootstrap": "5.3.8"
+    },
     "prefer-stable": true,
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "scripts": {
+        "post-install-cmd": [
+            "npm ci",
+            "npm run build"
+        ],
+        "post-update-cmd": [
+            "npm ci",
+            "npm run build"
+        ]
+    }
 }

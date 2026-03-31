@@ -9,7 +9,7 @@ Version: 0.1.0
 @import "vendor/twbs/bootstrap/scss/_variables-dark";
 
 // Bootstrap defaults
-@import "css/variables";
+@import "assets/css/variables";
 
 // Bootstrap Configuration
 @import "vendor/twbs/bootstrap/scss/_maps";
@@ -46,7 +46,7 @@ Version: 0.1.0
 @import "vendor/twbs/bootstrap/scss/_popover";
 // @import "vendor/twbs/bootstrap/scss/_carousel";
 // @import "vendor/twbs/bootstrap/scss/_spinners";
-// @import "vendor/twbs/bootstrap/scss/_offcanvas";
+@import "vendor/twbs/bootstrap/scss/_offcanvas";
 // @import "vendor/twbs/bootstrap/scss/_placeholders";
 
 // Bootstrap Helpers
@@ -56,4 +56,4 @@ Version: 0.1.0
 @import "vendor/twbs/bootstrap/scss/utilities/_api";
 
 // Custom Styles
-@import "css/base";
+@import "assets/css/base";

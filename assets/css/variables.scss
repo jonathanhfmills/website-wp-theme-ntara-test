@@ -1,14 +1,16 @@
+// Spacing
+$spacer: 1rem;
+$padding-x: 1rem;
+$padding-y: 0.75rem;
+
+// Colors
 $primary: #519ac3;
 $success: #00ff00;
 $info: #0000ff;
 $warning: #ffff00;
 $danger: #ff0000;
-$light: #e8e8e8;
+$light: #c4c4c4;
 $dark: #000000;
-
-$spacer: 1rem;
-$padding-x: 1rem;
-$padding-y: 0.75rem;
 
 $theme-colors: (
   "primary":    $primary,
@@ -29,6 +31,27 @@ $enable-shadows: true;
 $enable-smooth-scroll: false;
 $color-mode-type: media-query;
 
+// Typography
+$h1-font-size: 1.25rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1.25rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1rem;
+$h6-font-size: 1rem;
+
+$headings-font-weight: 600;
+
+$font-sizes: (
+  0: 0,
+  1: 1rem,
+  2: 1rem,
+  3: 1rem,
+  4: 1rem,
+  5: 1rem,
+  6: 1rem
+);
+
+// Custom variables
 $border-radius: 0;
 $border-radius-sm: 0.5rem;
 $border-radius-lg: 2rem;
